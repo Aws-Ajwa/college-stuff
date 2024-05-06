@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "45947746800",
+    "firebase_url": "https://bauniv-54321.firebaseio.com",
+    "project_id": "bauniv-54321",
+    "storage_bucket": "bauniv-54321.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45947746800:android:9cfb2a08d399e73f",
+        "android_client_info": {
+          "package_name": "jo.edu.bau.db"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45947746800-af17knnk52j57cvb9nicvtv0kehr9m4a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jo.edu.bau.db",
+            "certificate_hash": "341fbe96a14db61b60f4909ead50839e56ef14ec"
+          }
+        },
+        {
+          "client_id": "45947746800-2fihrqnrvnf3grdooktt0v4n3e4hi5te.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuDl_XO2FMVzP3AmvLynbowu5AYQu8KHc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45947746800-2fihrqnrvnf3grdooktt0v4n3e4hi5te.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

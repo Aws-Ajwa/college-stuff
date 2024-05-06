@@ -1,0 +1,127 @@
+Assignment Title: Android SQLite Database Integration
+
+Objective:
+
+The objective of this assignment is to implement SQLite database integration in an Android application. Students are expected to create a simple Android app that utilizes SQLite to perform basic CRUD (Create, Read, Update, Delete) operations.
+
+
+
+Requirements:
+
+Database Schema:
+
+Define a simple database schema related to a specific theme (e.g., a library system, a task manager, a contacts app, etc.).
+
+Include at least two tables with a meaningful relationship between them.
+
+Tables should have primary keys, and relationships (if any) should be appropriately established using foreign keys.
+
+User Interface:
+
+Create a user interface with appropriate elements (e.g., buttons, text fields, lists) to interact with the SQLite database.
+
+Implement separate screens for adding new records, viewing records, updating records, and deleting records.
+
+SQLite Database Operations:
+
+Implement the necessary Java classes to perform CRUD operations on the SQLite database.
+
+Ensure that database operations are encapsulated in a separate class or classes (e.g., a DatabaseHelper class).
+
+Handle exceptions and errors gracefully.
+
+Functionality:
+
+Add functionality to insert new records into the database.
+
+Implement a feature to display a list of records from the database.
+
+Enable users to update existing records.
+
+Implement a feature to delete records.
+
+
+
+Example of database :
+
+Task Manager Android App
+
+Database Schema:
+
+Tasks Table:
+
+task_id (Primary Key, Integer)
+
+task_name (Text)
+
+due_date (Text or Date)
+
+category_id (Foreign Key referencing Categories Table)
+
+Categories Table:
+
+category_id (Primary Key, Integer)
+
+category_name (Text)
+
+User Interface:
+
+Create a user interface with the following screens:
+
+Add Task:
+
+Fields for entering task name, due date, and selecting a category.
+
+A button to add the task to the database.
+
+View Tasks:
+
+Display a list of tasks with their details (name, due date, category).
+
+Each task item should have options to update and delete the task.
+
+Add Category:
+
+A screen to add new categories to the database.
+
+View Categories:
+
+Display a list of categories.
+
+Each category item should have options to update and delete the category.
+
+SQLite Database Operations:
+
+Implement Java classes to handle CRUD operations:
+
+TaskManagerDatabaseHelper:
+
+Create the SQLite database and tables.
+
+Implement methods for adding, updating, deleting, and querying tasks.
+
+CategoryManagerDatabaseHelper:
+
+Implement methods for adding, updating, deleting, and querying categories.
+
+Functionality:
+
+Add Task:
+
+Insert a new task with a due date and associated category.
+
+View Tasks:
+
+Display a list of tasks.
+
+Allow users to update and delete tasks.
+
+Add Category:
+
+Insert a new category.
+
+View Categories:
+
+Display a list of categories.
+
+Allow users to update and delete categories.

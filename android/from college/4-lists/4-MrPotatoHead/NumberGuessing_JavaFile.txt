@@ -1,0 +1,53 @@
+
+import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.Random;
+
+public class MainActivity extends AppCompatActivity {
+
+
+    Random random = new Random();
+    int randomNum = random.nextInt(1000);
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+    }
+
+
+    protected void submit(View view) {
+        EditText editText = findViewById(R.id.guessedNumber);
+        Toast toast = Toast.makeText(this, "", Toast.LENGTH_LONG);
+
+
+        try {
+            int intGuessedNum = Integer.parseInt(editText.getText().toString());
+
+            if (intGuessedNum == randomNum) {
+                toast.setText("You guessed correctly!");
+                toast.show();
+
+            } else if (Integer.parseInt(editText.getText().toString()) > randomNum) {
+                toast.setText("The right number is lower");
+                toast.show();
+            } else {
+                toast.setText("The right number is higher");
+                toast.show();
+            }
+        } catch (Exception e) {
+            toast.setText("Please make sure that you have entered a correct numeric input");
+            toast.show();
+        }
+    }
+
+
+}

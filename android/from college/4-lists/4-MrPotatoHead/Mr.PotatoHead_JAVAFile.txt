@@ -1,0 +1,116 @@
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+    }
+
+
+
+    protected void changeVisibility(View view) {
+
+
+
+        CheckBox armsCB = (CheckBox) findViewById(R.id.armsCB);
+        CheckBox earsCB = (CheckBox) findViewById(R.id.earsCB);
+        CheckBox eyebrowsCB = (CheckBox) findViewById(R.id.eyebrowsCB);
+        CheckBox eyesCB = (CheckBox) findViewById(R.id.eyesCB);
+        CheckBox glassesCB = (CheckBox) findViewById(R.id.glassesCB);
+        CheckBox hatCB = (CheckBox) findViewById(R.id.hatCB);
+        CheckBox mouthCB = (CheckBox) findViewById(R.id.mouthCB);
+        CheckBox mustacheCB = (CheckBox) findViewById(R.id.mustacheCB);
+        CheckBox noneCB = (CheckBox) findViewById(R.id.noneCB);
+        CheckBox shoesCB = (CheckBox) findViewById(R.id.shoesCB);
+
+
+        ImageView arms = (ImageView) findViewById(R.id.arms);
+        ImageView ears = (ImageView) findViewById(R.id.ears);
+        ImageView eyebrows = (ImageView) findViewById(R.id.eyebrows);
+        ImageView eyes = (ImageView) findViewById(R.id.eyes);
+        ImageView glasses = (ImageView) findViewById(R.id.glasses);
+        ImageView hat = (ImageView) findViewById(R.id.hat);
+        ImageView mouth = (ImageView) findViewById(R.id.mouth);
+        ImageView mustache = (ImageView) findViewById(R.id.mustache);
+        ImageView nose = (ImageView) findViewById(R.id.nose);
+        ImageView shoes = (ImageView) findViewById(R.id.shoes);
+
+        if (armsCB.isChecked()) {
+            arms.setVisibility(View.VISIBLE);
+        } else {
+            arms.setVisibility(View.INVISIBLE);
+        }
+
+
+        if (earsCB.isChecked()) {
+            ears.setVisibility(View.VISIBLE);
+        } else {
+            ears.setVisibility(View.INVISIBLE);
+        }
+
+        if (eyebrowsCB.isChecked()) {
+            eyebrows.setVisibility(View.VISIBLE);
+        } else {
+            eyebrows.setVisibility(View.INVISIBLE);
+        }
+
+
+        if (eyesCB.isChecked()) {
+            eyes.setVisibility(View.VISIBLE);
+        } else {
+            eyes.setVisibility(View.INVISIBLE);
+        }
+
+        if (glassesCB.isChecked()) {
+            glasses.setVisibility(View.VISIBLE);
+        } else {
+            glasses.setVisibility(View.INVISIBLE);
+        }
+
+
+        if (hatCB.isChecked()) {
+            hat.setVisibility(View.VISIBLE);
+        } else {
+            hat.setVisibility(View.INVISIBLE);
+        }
+
+        if (mouthCB.isChecked()) {
+            mouth.setVisibility(View.VISIBLE);
+        } else {
+            mouth.setVisibility(View.INVISIBLE);
+        }
+
+
+        if (mustacheCB.isChecked()) {
+            mustache.setVisibility(View.VISIBLE);
+        } else {
+            mustache.setVisibility(View.INVISIBLE);
+        }
+
+        if (noneCB.isChecked()) {
+            nose.setVisibility(View.VISIBLE);
+        } else {
+            nose.setVisibility(View.INVISIBLE);
+        }
+
+
+        if (shoesCB.isChecked()) {
+            shoes.setVisibility(View.VISIBLE);
+        } else {
+            shoes.setVisibility(View.INVISIBLE);
+        }
+
+    }
+
+}
+
+
+
+
