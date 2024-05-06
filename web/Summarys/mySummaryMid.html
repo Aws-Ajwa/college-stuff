@@ -1,0 +1,450 @@
+<!-- -->
+<!DOCTYPE >
+<html>
+  <head> </head>
+  <body></body>
+</html>
+<!--
+   ? main aspects
+   ! important tags or elements
+   // attributes and notes
+   ~ types of things
+   % special things  
+
+   % url forms :
+   1) protocol://DomainName/Filepath
+   2) protocol://ip:port/Filepath
+-->
+<!-- 
+    ? the basic structure of an html code:
+    ! the <!DOCTYPE> helps the browser to identify the html version and run the code
+    ! the <html></html> it is the root tag that is mandatory tag to the html code structure
+    ! the <head></head> tag contains the title of the page and the metaData
+    // the <head></head> tag  may contain the CSS and JS codes but not usually
+    ! the <title></title> tag its the name of the html page tap
+    ! the <body></body> tag contains the page content (text , images , ...)
+    // the <body></body> tag usually contain the CSS and JS codes
+    // the <body></body> may contain a text directly but it will format it at the (top left of the page)
+    ? the tags have two types :
+    ~ 1) self-closing tags <.../>
+    ~ 2) open-close tags <...></...>
+    ~ 3) self-closing tags with attributes <... attributes/>
+    ~ 4) open-close tags with attributes <... attributes></...>
+    // all of the html tags are not case Sensitive except (char entities).
+-->
+<!--
+    ? the text tags in the html code:
+    ! the <p></p> tag stands for paragraph 
+    // the paragraph tag will remove all of your text spaces and it will type it at a single line
+    // the paragraph tag have an attribute align="..." -> (left , right , center , justify)
+    ! the <pre></pre> tag stands for preserved  
+    // the preserved tag will type your text the same as you typed it.
+    // the pre tag will brake a new line above and a new line under in.
+-->
+<!--
+    ? the text Heading tags:
+    ! <h1> text </h1> the largest
+    ! <h2> text </h2>
+    ! <h3> text </h3>
+    ! <h4> text </h4>
+    ! <h5> text </h5>
+    ! <h6> text </h6> the smallest
+    // this tags will write the text in Bold and with different size
+-->
+<!--
+    ? the text formatting tags:
+    ! <br/> 
+    // this will break a new line
+    ! <mark> Hello</mark> 
+    // Marked text (highlighted text)
+    ! <small> Hello </small> 
+    // text appeared smaller
+    ! <i>---------</i> 
+    ! <em>--------</em> 
+    // makes the text italic
+    ! <b>---------</b> 
+    ! <strong>---</strong>
+    // makes the text bold
+    ! <u>---------</u> 
+    // makes the text underlined
+    ! <del>-------</del> 
+    ! <strike>----</strike> 
+    // makes a line through the text
+    ! <sup>-------</sup> 
+    // makes the text superscript
+    ! <sub>-----</sub>
+    // makes the text subscript
+-->
+<!--
+    ? HTML Character Entities:
+    //  ( ) space 
+    !  &nbsp; or &#160;
+    //  (<) less than  
+    !   &lt; or &#60;
+    //  (>) greater than 
+    !   &gt; or &#62;
+    //  (&) ampersand 
+    !   &amp; or &#38;
+    //  (") double quotation mark 
+    !   &quot; or &#34;
+    //  (') single quotation mark (apostrophe) 
+    !   &apos; or &#39;
+    //  (¢) cent 
+    !   &cent; or &#162;
+    //  (£) pound 
+    !   &pound; or &#163;
+    //  (¥) yen 
+    !   &yen; or &#165;
+    //  (€) euro 
+    !   &euro; or &#8364;
+    //  (©) copyright 
+    !   &copy; or &#169;
+    //  (®) registered trademark 
+    !   &reg; or &#174;
+-->
+<!--
+    ? Path / URLs : images and Links
+    ! the image tag is a self closing tag <img .... />
+    // the image tag attributes : 
+    // 1) the src attribute
+    // it is a mandatory attribute
+    // it could take (URL , full path , relative path)
+    // 2) the width attribute is takes a pixel number or a %
+    // 3) the height attribute is takes a pixel number or a % 
+    // if you didn't enter a width and hight it will take the default of the image
+    // this two attributes can take a percent value and for some reason it wont work with the hight
+    // 4) the border attribute is takes a pixel number 
+    // the border is a solid line (if you want to change it use CSS)
+    // the number represents the Thickness of the border
+    // 5) the alt attribute it takes a text value 
+    // this attribute text will appear if the image cant lode for any reason
+    // 6) the title attribute don't forget about it
+-->
+<!--    
+    ? Paths:
+    ! 1) full/absolute path : its the full thing starting from the disk to the file extension.
+    ! 2) relative path : its like moving locale within our pages to link things relatively to each other
+    // the relative path is usually used with images and pages in this case you don't need to write the full path
+    ! the relative path has four cases :
+    ~ 1) the image and the page are in the same folder :
+          !<img src = "image.jpg"/>
+    ~ 2) the image was one level outside the page folder :
+          !<img src = "../image.jpg"/>
+    ~ 3) the image was one level inside the page folder :
+          !<img src = "folderName/image.jpg"/>
+    ~ 4) the image was on the Root folder directly and the page in any folder :
+          !<img src = "/image.jpg"/>
+    % when putting a src in the image tag we don't use (.jpeg) instead we use (.jpg)???
+    ??? the relative path works with image and pages and with page and page
+  -->
+<!--
+    ? lists has Three types :
+    ~ 1. Order List: is used for lists of items for which the order of the items does matter. 
+      ! the <ol></ol> tag its the main tag of the ordered list
+      ! the <li></li> tag it is the items of the list 
+      // the ordered list item attributes:
+      // 1) the type attribute it could take (1 (the default) , a , A , i , I)
+      // 2) the reversed attribute it will reverse the numbering of the list
+      // 3) the start attribute it will state at what number the list will Start
+      % in the start attribute if you exceeded the number of letters it will do this (aa , ab , ...) 
+    ~ 2. Unordered List: is a list in which the order of the list items does not matter.
+      ! the <ul></ul> tag its the main tag of the unordered list
+      ! the <li></li> tag it is the items of the list 
+      // the unordered list item attributes:
+      // 1) the type attribute it could take (disc (the default) , circle , square , none)
+    ~ 3. Definition List: A description list is a list of terms, with a description of each term.
+      ! the <dl></dl> tag its the main tag of the Definition list
+      ! the <dt></dt> tag it is the items of the list 
+      ! the <dd></dd> tag it is the description of items in the list
+-->
+<!--
+    ? Links Or HyperLinks : when you move your mouse to it it will turn into a little hand
+    // there is Three uses of the hyperLinks:
+      ~ 1) to Jump from a page to a page locale on the same website.
+      ~ 2) to Jump from the page to an external page from a website to another website.
+      ~ 3) to Jump from a part to any other part of the same page.
+    ! the hyperLink tag is <a></a> referees to anchor (مرساة)  
+    ! <a> (text , image , ....)-> this is the visible part of the link </a> 
+    // note : 
+    // By default, a link will appear like this (in all browsers): 
+       ? An unvisited link is underlined and blue 
+       % A visited link is underlined and purple 
+       ! An active link is underlined and red
+    // the anchor tag attributes :
+    // 1) href : we insert the path of the whatever here (relative or absolute).
+    // if the href was empty it the link will appear like a regular text.
+    // 2) target : this attribute specifies where to open link tab
+       % a) _self : this value will override the same tab (the default).
+       % b) _Blank : this value will open a new tab.
+       % c) iframeName : this value will open the tap in an internal window called (Iframe).
+    ? Bookmarks:
+    ! a Bookmark is used to jump from a specific part to a specific part in the web page.
+    ! the Bookmark also can be used to jump to a specific part in an external page.
+    // 1) you will need to give the targeted part of tag an id with the id attribute.
+    // 2) in the href attribute you will need to write :
+    ~   <a href = "#id"> (text , image , ...) </a> 
+    //  -> if it was in the same page.
+    ~   <a href = "(fullPath or relativePath)#id"> (text , image , ...) </a> 
+    //  -> if it was in an external page. 
+    ? the mail Links :
+    ! <a href = "mailto:mymail@gmail.com?Subject=anything"> (text , image , ...) </a>
+    // this link will open the mail application to use it with the same mail.
+    % you need to write it exactly the same (important).
+-->
+<!--
+   ? the iFrame and its attributes: its an internal window inside our page.
+   ! <iframe></iframe>
+   // we use it to open an external (using src) or internal (using name) page within our page. 
+   // iframe tag attributes :
+   // 1) name : the name that we use to call the iframe in the link tag.
+   // 2) width : the iframe width.
+   // 3) height : the iframe height.
+   // 4) src : it takes a image or url Path that will be the default site.
+   // 5) align : it is the alignment of the iframe within the page according to the surrounding elements.
+   // the align takes (left , right , center).   
+-->
+<!--
+    ? Image Mapping : its like putting a clickable area in any Image that jump to some page
+    ? Steps to do mapping to an image or using an image as a link:
+    * 1) prepare your image
+    * 2) prepare your page and your files
+    * 3) create an Image tag with the attribute (usemap)
+    * 4) create a map tag
+    ! <img src = "The image Path" usemap = "#mapName"/>
+    ? the map tag : we use it to locate the clickable areas and there shapes
+    // map tag attributes : 
+    // 1) name : its the name that we need to use in the usemap attribute.
+    // area tag attributes:
+    // 1) shape : it specifies the Targeted shape it could be
+     ~ 1) circle
+     ~ 2) rect 
+     ~ 3) poly
+     ~ 4) default : Specifies the entire Image as a clickable area 
+    // 2) coords : it takes the coordinates of the specified shape.
+    // 3) href : it takes Path or Url Link to jump when clicked on the shape. 
+    // 4) alt : this is the text that will appear if the image cant load for any reason.
+    // 5) title : its the text that appears when moving your mouse on your shape.
+    % to make it work right you cant change the width or the hight of the main image.
+
+    ! <map name ="anyName">
+    !   <area shape="rect" coords="Top , Left , Right , Bottom" href="Url or Path" alt="anyText" title="anyText"> 
+    !   <area shape="circle" coords="X , Y , Radius" href="Url or Path" alt="anyText" title="anyText"> 
+    !   <area shape="poly" coords="X1 , Y1 , X2 , Y2 , ... , Xn , Yn" href="Url or Path" alt="anyText" title="anyText">
+    ! </map>
+    // The last pair of numbers in a polygon will automatically line up with the first pair.
+    // you can use paint application to get the coordinates of any shape in your image.
+-->
+<!--
+    ? Tables : in the past before CSS tables was used to divide Pages as a Layout.
+    ! <table> (text , image , table , iframe , ...) </table> : the main table tag.
+    ! <tr> </tr> : the row tag it could have th or td tags.
+    ! <th> (text , image , table , ...) </th> : the Heading cells tag (it will make content Bold and Center).
+    ! <td> (text , image , table , ...) </td> : the data cells tag (it will make content unBold and left).
+    ! <caption> ... </caption> : its a tag that will work as a title of the table. (only one)
+    
+    ! <thead> <tr> <th> </th> ... </tr> </thead>  : tag is used to group header content in an HTML table. 
+    ! <tbody> <tr> <td> </td> ... </tr> </tbody> : tag is used to group the body content in an HTML table. 
+    ! <tfoot> <tr> <td> </td> ... </tr> </tfoot> : tag is used to group footer content in an HTML table.
+    // this three tags are useful in printing you know the note.
+    // these tags are optional to use she didn't talk about them. 
+
+    // we need to write the caption tag directly after the table tag (optional).      
+    // when creating a table in html it will not have a border so we will use CSS:
+    // CSS has three types : 
+    // 1) In Line CSS.
+    // 2) Internal CSS: we code in the head tag (our choice here).
+    // 3) External CSS.
+    <head>
+      <style>
+        table {
+          border : solid blue 10px;
+        // short-hand 
+        ! selector : style (mandatory) color width (in pixel or %);
+        ~ the style attribute has many types : (solid , dotted , dashed , double , groove).  
+        }
+      </style>
+    </head>
+    // this will be applied to the outer frame of the table so we need to do it like This:
+    <head>
+      <style>
+        table , th , td {
+          border : solid blue 10px;
+        ! selector , selector , ..... {
+          border : style (mandatory) color width (in pixel);
+        }
+        ! we can use many selectors but they must have the same attributes its called Grouping.   
+        }
+      </style>
+    </head>
+    // at the end there will be spaces between the data them selfs and the table frame to solve it:
+    <head>
+      <style>
+        table , th , td {
+          border: solid blue 10px;
+          border-collapse : collapse;
+          ! this attribute will create a single border table.   
+        }
+      </style>
+    </head>
+    // we will consider that there is an already created table this is a CSS code for it:
+    <head>
+      <style>
+        table , th , td {
+          border: solid blue 10px;
+          border-collapse : collapse;
+          border-spacing : 10px;
+          ! this attribute is like margin but the border-collapse attribute Disables it.
+          % this is a table attribute.
+          % if you set its value to 0px it will show as a double border it will double the border size.
+          background-color: yellow;
+          ! the table background color.
+          color: red;
+          ! the font color.
+          vertical-align:(Top , middle , bottom);
+          ! the vertical alignment of the cells content.
+          text-align:(Left , Center , Right);
+          ! the horizontal alignment of the cells content.
+          % th : Bold , Center , Middle.
+          % td : Normal , Left , Middle.
+          // the last two attribute effects only the cells.
+          padding: 10px;
+          ! it apply it to all directions.
+          padding: 20px 10px 30px 50px;
+          !         T    R    B    L
+          margin: 20xp;
+          ! it apply it to all directions.
+          margin: 10px 20px 30px 40px;
+          !         T    R    B    L
+        }
+      </style>
+    </head>
+    // the rows and columns merging: 
+    // we use two attributes to merge rows and columns:
+    // 1) to merge two rows or more : rowSpan = "num"
+    // 2) to merge two columns or more : colSpan = "num"
+    ! this is a th , td tags attributes. 
+-->
+<!--
+   ? video tag : its a tag that we use to insert a video to our page.
+   <video autoplay control (width)px (hight)px> 
+        <source src = "absolute or relative path"
+   </video>
+-->
+<!--
+  ? Html forms : it allows the interaction between the user and the web page or application. 
+  ! the form will collect data from the user and post it to the backend application to process it or to store it.
+  ! <form> ... </form>
+  // form attributes : 
+  // 1) action = "file.php" : this is the backend script we use to process the collected data.
+  // 2) method = "GET or POST" : these are the HTTP methods that are used when submitting data.
+  // the GET properties:
+     1) its the default value of the method.
+     2) the submitted form will be visible in the url.
+     3) we use it with small data.
+     4) we use it with non-sensitive data.
+     5) the url size has a limited size.
+     // the POST properties:
+     1) the submitted form will be invisible in the url.
+     2) we use it with big data like file upload.
+     3) we use it with sensitive data.
+     4) the url has a unlimited size.
+  // 3) enctype = "multipart/form-data" : its the method that the browser will encode data.
+  //    enctype = "application/x-www-form-urlencoded"
+  // the multipart/form-data properties : 
+     1) we use when there an upload process (attachment) in the page.
+     2) to use it the method must be Post. 
+  ! <fieldset> ... </fieldset> : this is the border of the form.
+  // its in the form tag
+  ! <legend> ... </legend> : it is like the form caption.
+  // its in the fieldset tag  
+  % keep in mined the idea of counting the form elements from the url after submitting the data.
+  ? the input tag and its info : 
+  <input type = "..." name = "..." size = "..." maxLength = "number" minLength = " " value = " "/>
+  // input attributes : 
+  // 1) type = "" : it has 9 different values 
+     (text , number , email , password , radio , checkbox , submit , reset , image , file)
+  // 2) name = "text" : its the name of the input tag that we use in the php file as a reference.
+  // 3) size = "number" : it is the width of the input box.
+  // 4) maxLength = "number" : it is the maximum number of any thing that can be typed in the input.
+  // 5) minLength = "number" : it is the minimum number of any thing that can be typed in the input.
+  // 6) value = "text"
+        the value attribute with the (text , number , email , password) is the initial value.
+        -> if you didn't give it a value it will be send empty
+        the value in the (submit , reset) is the text within the button itself.
+        -> if you didn't give it a value it will be send with the submit or the reset values
+        the value in the (radio , checkbox) its the value of our choice that will be send to the server.
+        -> if you didn't give it a value it will be send on
+  ! <input type = "text" size = "20" maxLength ="10" minLength = "2" name = "text" value = "text"/>
+    we use this to enter any thing in the keyboard
+  ! <input type = "number" size = "20" maxLength ="10" minLength = "2" name = "number" value = "123"/>
+    we use this to enter numbers (0 ... 9)
+  ! <input type = "email" size = "20" maxLength ="10" minLength = "2" name = "email" value = "email"/>
+    we use it to enter a text with a mandatory @ sign
+  ! <input type = "password" size = "20" maxLength ="10" minLength = "2" name = "password" value = "password"/> 
+    we use it to enter a text that will appear as discs or stars
+  ! <input type = "radio" name = "RADIO BUTTOns" value = "RB1" checked/>
+  ! <input type = "radio" name = "RADIO BUTTOns" value = "RB2"/>
+  ! <input type = "radio" name = "RADIO BUTTOns" value = "RB3"/>
+    - this is clearly the radio buttons to prevent the user from choosing more then one button we can 
+      give all of them the same value to the name attribute.
+    - we use the checked attribute to make the radiobutton checked as the default one.
+    - here we use the value to distinguish between the user choices.
+  ! <input type = "checkbox" name = "CB1" value = "C1" checked /> CB1 = C1
+  ! <input type = "checkbox" name = "CB2" value = "C2"/> CB2 = C2
+  ! <input type = "checkbox" name = "CB3" value = "C3"/> CB3 = C3
+    - this is clearly the checkboxes we use this to allow the user to select multiple choices.
+    - we use the checked attribute to make the checkbox will be checked as the default one.
+    - here we use the value to distinguish between the user choices.
+  ! <input type = "submit" name = "subButton" value = "submit"/>
+    - this is a mandatory component of the page.
+  ! <input type = "reset" name = "re" value = "reset"/> 
+  // there is some various ways to create a submit button : it submit all components to the server.
+     <input type = "submit"/>
+     <input type = "image" src = "path"/>
+     <button type = "submit"> text </button>
+     <button type = "submit"> <img/> </button>
+  // there is some various ways to create a reset button : it reset all components to the initial value.
+     <input type = "reset"/>
+     <button type = "reset"> text </button>
+     <button type = "reset"> <img/> </button>
+  // how to create a regular button : it will do nothing until you program it. 
+     <button type = "button"/>
+     <input type = "button"/>
+     <button type = "button"> text </button>
+     <button type = "button"> <img/> </button>
+  ! <input type = "file" name = "file1" multiple accept = ".pdf , .docx , ..."/>
+     - we use this to upload files its a button.
+     - the default value of it is "choose file" you can change it.
+     - don't forget to write the method = "Post" and enctype = "multipart/form-data" in the form tag
+     % the multiple attribute is to allow user to upload more then one file.
+     % the accept attribute in the allowed type of files it could take:
+     % (.anyFileExtension , .anyFileExtension , (image/*) , (video/*) , (audio/*))
+  // the textArea tag : we use it to allow user to enter more then one line of text.
+   - the rows attribute represents the Hight (the visible number of rows)
+   - the cols attribute represents the Width (the visible number of columns)
+     <TextArea name = "..." rows ="" cols = "">
+      the default text
+     </TextArea>
+  // the dropDown list :
+  <select name = "dropDown[]" multiple size = "1">
+    <option value = "text1" selected> ... </option>
+    <option value = "text2" disabled> ... </option>
+    <option value = "text3"> ... </option>
+    <option value = "text4"> ... </option>
+  </select>
+  - the multiple attribute is to allow user to select more then one item using CTRL.
+  - if we used the multiple attribute we need to write a [] in the name to send all choices as an array.
+  -- if we didn't write [] it will override all items with the last selected item to send it.
+  - the size attribute is the visible item to the user before he open the list
+  -- the default value of the size is 1 if the multiple attribute is written it will be 4.
+  - if you didn't write the value attribute the visible text to the user will be sent to the server.
+  ? the three validation attributes :
+  ! 1) type 
+  ! 2) maxLength , MinLength
+  ! 3) Required : we use it to force the user to enter the data before submitting
+       - the only type that is forced without the required is the email.
+  ~ any component that don't have a name the backend application or the server can't identify it. 
+  ~ in the dropDownList without the multiple attribute its like a radio and with it its like a checkbox
+  ~ in the dropDownList the name is for the select tag and the value is for the option tag.
+  ~ the name attribute is like a variable that takes the value attribute when submitting or the visible text.
+-->

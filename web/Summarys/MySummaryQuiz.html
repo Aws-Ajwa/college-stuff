@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body></body>
+</html>
+<!--
+   ? CSS : (cascading style sheet) we use it to style or decorate the web page
+   ! CSS has Three types :
+   // 1) In line CSS:
+   // we write the CSS code in the style attribute it will be applied on a single element.
+   // we write it into the body tag exactly at the targeted element tag. 
+   // 2) Internal CSS:
+   // we write it in the style tag within the head tag.
+   // 3) External CSS:
+   // steps to to this type:
+   // 1) open the notepad++. 
+   // 2) create a file and write the Css code directly in it.
+   // 3) save the file as a (.CSS) file
+   // 4) link your file to your html page using link tag in the header tag like so:
+   <head>
+    <Link rel = "styleSheet" type = "txt/Css" href = "CSS_file_path/file.Css"/>
+    ! the rel attribute represents the relation attribute to your page and its a StyleSheet.
+    ! the type attribute its the file type declaration 
+    ! the href attribute its clearly the pointer to your file
+   </head>
+-->
+<!--
+    ? the skelton of the CSS code is:
+    selector , ... {
+        property : value;
+        property : value;
+        property : value;
+        ...
+    % any property with two words will be separated with a dash (border-style).
+    % all things inside the {} called DeclarationBlock or RuleSet
+    } 
+   ! the selector types:
+   // 1) tag name: it will be applied to all elements with that name.
+   // 2) class: we use it to select a set of elements to apply the CSS code on them.
+   //    here you need to use the class attribute with your elements. 
+   //    we will be calling it as a selector like this (.className)
+   // 3) id: we use it to select a specific element to apply the CSS code on.
+   //    here you need to use the ID attribute with your element. 
+   //    we will be calling it as a selector like this (#idName)
+   // 4) the selector (*) means to apply on all elements. 
+-->
+<!--
+    ? CSS Grouping: we use it to reduce code redundancy when your elements have the same attributes values.
+    // as an example Like the table , th , td when they have the same values.
+-->
+<!--
+    ? CSS priority : it depends on the CSS type at first and then on the selector type.
+    ! the CSS priority according to selector type:
+    // 1) id selector.
+    // 2) class selector.
+    // 3) tagName selector.
+    % we use this priority when the attributes are the same but the values are different.
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                h1{
+                    color:blue; -> duplicated
+                    border-style: solid; -> duplicated
+                    border-width:1px; -> duplicated
+                    border-color:black; -> duplicated
+                    // all of these attributes will be apply on the first H1 tag
+                }
+                .elementClass{
+                    color:red; -> duplicated
+                    text-decoration:underline; -> not duplicated
+                    border-style:solid; -> duplicated
+                    border-width:1px; -> duplicated
+                    border-color:black; -> duplicated
+                }
+                #element1{
+                    color:green; -> duplicated
+                    border-style:dashed; -> duplicated
+                    border-width:5px; -> duplicated
+                    border-color:yellow; -> duplicated
+                }
+            </style>
+        </head>
+        <body>
+            <h1>First</h1>
+            <br>
+            <h1 id = "element1" class="elementClass">Second</h1>
+            // the duplicated attributes will be overridden to the hightest priority 
+            // this element will take only the duplicated attributes on the id selector
+            // and it will take the non duplicated attributes from any other selector 
+        </body>
+    </html>
+    ! the CSS priority according to CSS type:
+    // 1) In Line CSS 
+    // 2) Internal CSS or External CSS
+    // the idea here is simple as follow:
+    // it will first do the external and the internal according to what is written first
+    // then it will override the Similarities attributes if there is an In line CSS.
+    // the last thing to execute is the hightest priority that its effect will be applied.
+-->
+<!--
+    ? CSS common attributes :
+    ! Background properties:
+    ~ 1) Background-color: it has three ways to give it a value
+    // A) BackGround-color: colorName;
+    // B) BackGround-color: #hexadecimalCode;
+    // C) BackGround-color: rgb([0,255] , [0,255] , [0,255]);
+    % we can use these three coloring methods to any coloring attribute.
+    ~ 2) BackGround-Image: it has two ways to write it
+    // A) BackGround-Image: url(absolutePath or relativePath);
+    // B) BackGround-Image: url(absolutePath or relativePath) , url(absolutePath or relativePath) , ...;
+    % this attribute will override the images on top of each other.
+    % if the image was too small it will go top left position by default.
+    ~ 3) BackGround-repeat: it has two ways to write it
+    // A) BackGround-repeat:repeat;
+    // B) BackGround-repeat:no-repeat;
+    % the backGround selector is the bodyTag.
+    % we can use a short hand attribute in the BackGround like so:
+    backGround: green url(path) repeat;
+    //          color  image   imageRepeat
+    ! Font properties:
+    ~ 1) font-family: it has two ways to write it
+    // A) font-family: "fontType";
+    // B) font-family: "fontType" , "fontType" , ...; 
+    % the second way will apply the second type if the first one was not supported.
+    ~ 2) font-weight: it has mean ways to write it
+    // A) font-weight: bold;
+    // B) font-weight: normal;
+    // C) font-weight: thick;
+    // D) font-weight: 400; -> this is the normal
+    // E) font-weight: 550; -> this is the bold
+    // F) font-weight: bolder;
+    ~ 3) font-Style: it has two ways
+    // A) font-style: italic;
+    // B) font-style: normal;
+    ~ 4) font-size: (Number)px;
+    ! Box model properties:
+    ~ 1) width:
+    // A) width:(number) px;
+    // B) width:(number) %;
+    ~ 2) height:
+    // A) height:(number) px;
+    // B) height:(number) %;
+    ~ 3) padding: the inside space
+    // A) padding: number; (in includes the top right bottom left)
+    // B) padding: number1 number2 number3 number4;
+    %                top    right  bottom   left
+    ~ 4) margin: the outside space
+    // A) margin: number; (in includes the top right bottom left)
+    // B) margin: number1 number2 number3 number4;
+    %                top    right  bottom   left
+    //--------------------------------------------------------------------------------------
+    ~  border-top-Style:solid;
+    ~  border-bottom-Style:dashed;
+    ~  border-right-Style:groove;
+    ~  border-left-Style:double;
+   //--------------------------------------------------------------------------------------
+   ! to make the border topped open or bottomed open or left open or right open use:
+    ~  border-top-width:0px;
+    ~  border-bottom-width:0px;
+    ~  border-right-width:0px;
+    ~  border-left-width:0px;
+   //--------------------------------------------------------------------------------------
+    ~  border-top-color:red;
+    ~  border-bottom-color:yellow;
+    ~  border-right-color:blue;
+    ~  border-left-color:green;
+    //--------------------------------------------------------------------------------------
+    ! text properties:
+    ~ 1) color: its the font color and it has three ways to write it
+    // A) Color: colorName;
+    // B) Color: #hexadecimalCode;
+    // C) Color: rgb([0,255] , [0,255] , [0,255]);
+    ~ 2) text-align: its the text positioning and it has four ways to write it
+    // A) text-align: left;
+    // B) text-align: right;
+    // C) text-align: center;
+    // D) text-align: justify;
+    ~ 3) direction : its the text writing direction and it has two ways to write it
+    // A) direction: ltr; (left to right)
+    // B) direction: rtl; (right to left)
+    ~ 4) text-decoration: it has four ways to write it
+    // A) text-decoration: underLine; -> its equivalent to the <u></u> tag
+    // B) text-decoration: overLine;
+    // C) text-decoration: line-through; -> its equivalent to the <strike></strike> tag
+    // D) text-decoration: none;
+    ~ 5) letter-spacing: (number) px;
+    // this is the space between letters.
+    ~ 6) word-spacing: (number) px;
+    // this is the space between words.
+    ~ 7) text-transform: it has two ways to write it
+    // A) text-transform: uppercase;
+    // B) text-transform: lowercase;
+    ~ 8) text-shadow: (number)px (number)px (number)px color;
+    //                  width      height      blur    color
+    // if you didn't write the blur number the text will be duplicated.
+-->
