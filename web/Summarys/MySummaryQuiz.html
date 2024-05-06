@@ -105,6 +105,7 @@
     // A) BackGround-color: colorName;
     // B) BackGround-color: #hexadecimalCode;
     // C) BackGround-color: rgb([0,255] , [0,255] , [0,255]);
+    % if you did write more then 255 it will be conceded as 255.
     % we can use these three coloring methods to any coloring attribute.
     ~ 2) BackGround-Image: it has two ways to write it
     // A) BackGround-Image: url(absolutePath or relativePath);
@@ -115,9 +116,6 @@
     // A) BackGround-repeat:repeat;
     // B) BackGround-repeat:no-repeat;
     % the backGround selector is the bodyTag.
-    % we can use a short hand attribute in the BackGround like so:
-    backGround: green url(path) repeat;
-    //          color  image   imageRepeat
     ! Font properties:
     ~ 1) font-family: it has two ways to write it
     // A) font-family: "fontType";
@@ -128,7 +126,7 @@
     // B) font-weight: normal;
     // C) font-weight: thick;
     // D) font-weight: 400; -> this is the normal
-    // E) font-weight: 550; -> this is the bold
+    // E) font-weight: 700 or 550; -> this is the bold
     // F) font-weight: bolder;
     ~ 3) font-Style: it has two ways
     // A) font-style: italic;
@@ -192,6 +190,21 @@
     // A) text-transform: uppercase;
     // B) text-transform: lowercase;
     ~ 8) text-shadow: (number)px (number)px (number)px color;
-    //                  width      height      blur    color
+    //                horizontal  vertical    blur    color
     // if you didn't write the blur number the text will be duplicated.
+    // you can add more than one shadow to the same text just like background (,).
+    // the horizontal shadow and the vertical shadow is a required attributes and negative values are allowed.
+    //-----------------------------------------------------------------------------------
+    ! short hands:
+    % we can use a short hand attribute in the BackGround like so:
+    backGround: background-color background-image background-repeat;
+    % we can use a short hand attribute in the font like so:
+    font: font-style font-weight font-size font-family;
+    % we can use a short hand attribute in the border like so:
+    border:border-width border-style border-color;
+    border-style:border-top-Style border-bottom-Style border-right-Style border-left-Style;
+    % we can use a short hand attribute in the padding like so:
+    padding:padding-top padding-right padding-bottom padding-left;
+    % we can use a short hand attribute in the margin like so:
+    margin:margin-top margin-right margin-bottom margin-left;
 -->
