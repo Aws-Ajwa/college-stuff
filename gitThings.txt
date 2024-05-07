@@ -1,0 +1,67 @@
+commands on the command line :
+1) pwd : we use this command to show the current working path
+---------------------------------------------------------------------
+2) cd : we use this command to get in a directory.
+----------------------------------------------------------------
+3) cd .. : we use this command to get out a directory.
+----------------------------------------------------------------
+4) ls : we use this command to show the lists of directors.
+----------------------------------------------------------------
+5) mkdir (dirName): we use this command to creates a new directory.
+---------------------------------------------------------------------
+6) touch (filename.ex) : we use this command to creates a new file.
+-------------------------------------------------------------------------
+7) clear : we use this command to clear the command line.
+-------------------------------------------------------------------------
+8) git clone (repo URL) : we use this command to clone a repository into our computer
+--------------------------------------------------------------------------------------
+9) git status : we use this command to show the files on the staging area.
+--------------------------------------------------------------------------------------
+10) git add (filename.ex) : we use this commands add files to the staging area.
+you can use (git add *) to add all files in the directory to the staging area.
+--------------------------------------------------------------------------------------
+11) git reset head (filename.ex) : we use this command to remove unwanted files from the staging area.
+--------------------------------------------------------------------------------------
+12) git commit -m "write any comment" : this command will move your files from staging area to localRepo.
+--------------------------------------------------------------------------------------
+13) git branch : we use this command to show the branches of the repository.
+--------------------------------------------------------------------------------------
+14) git remote -v : we use this command to show the remote repository that we are in.
+--------------------------------------------------------------------------------------
+15) git push (remoteName) (branchName) : we use this command to push our commits to the repository.
+--------------------------------------------------------------------------------------
+16) git pull (remoteName) : we use this command to pull new files from the remote repository.
+    this command will do two commands (git fetch) and (git merge) parallel.
+--------------------------------------------------------------------------------------
+17) git fetch (remoteName) : we use this command to fetch the new things in the repository.
+18) git merge : we use this command to merge the new things in our local branch.
+    this two commands can be done faster in one time using (git pull).
+--------------------------------------------------------------------------------------
+19) git config --list : we use this command to change the configuration of our repository.
+    git config -l (shortcut)
+--------------------------------------------------------------------------------------
+if you faced a problem when using the (git config --list) command 
+with the gitBash press q to get back to writing command again.
+--------------------------------------------------------------------------------------
+20) git help config : this command will take you to the various configuration options to your repo.
+------------------------------------------------------------------------------------------
+21) git config --global (configurationName) : 
+we use this command to show the value of the specified configurationName.
+----------------------------------------------------------------------------------------
+21) git config --global (configurationName) ("Value") : 
+we use this command to edit the value of the specified configurationName.
+-----------------------------------------------------------------------------------------
+a simple Example to the last two commands:
+git config user.name
+git config user.name "ahmad ismail"
+you can edit any configuration Appears on the configurationList using the last command. 
+-----------------------------------------------------------------------------------------
+the configuration of the repository may be duplicated the reason why
+that the configuration comes from various places so thats clearly a damn a bug in the git things.
+so we can use the following command to view the places that we git our configurations from:
+22) git config -l --show-(remoteName)
+-----------------------------------------------------------------------------------------
+23) git config --global --unset (configurationName) : we use this command to remove a configuration value
+we can also use git config --global (configurationName) "" to do the same thing.
+---------------------------------------------------------------------------------------------------
+24) git config --global --edit : we use this command to edit the configurations using the default editor.
