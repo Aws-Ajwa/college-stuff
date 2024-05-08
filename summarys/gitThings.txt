@@ -65,3 +65,25 @@ so we can use the following command to view the places that we git our configura
 we can also use git config --global (configurationName) "" to do the same thing.
 ---------------------------------------------------------------------------------------------------
 24) git config --global --edit : we use this command to edit the configurations using the default editor.
+-----------------------------------------------------------------------------------------------------------
+** what is the public key or the secureShellKey? :
+its a general commandLine thing that we can use it in many situations (servers , github , ...)
+** what do we need the public key for ?:
+we need it to access our repository and authenticate the access to the repository
+we use it in github to me authenticated to do actions without the need 
+to enter your email and password every time.
+** how to create a public key of a secureShellKey ?
+1) ssh-keygen -t rsa -b 4096 -C "yourGitHubEmail"
+// -t : the key generation algorithm type.
+// rsa: rivest shamir adleman (this is an algorithm).
+// -b: the key bits number.
+// -C: the github email.
+// this process will show you the key storing directory.
+// this process will ask you to add a password to protect your key (optional to enter).
+** how to get your public key? : use command (cat)
+2) cat "Path"
+//Path: here you enter the path that the public key saved in.   
+3) copy your public key and add it to your github account.
+4) you can test your public key using the following command:
+   ssh -T git@github.com
+-----------------------------------------------------------------------------------------------------------
