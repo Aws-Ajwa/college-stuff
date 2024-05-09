@@ -87,3 +87,20 @@ to enter your email and password every time.
 4) you can test your public key using the following command:
    ssh -T git@github.com
 -----------------------------------------------------------------------------------------------------------
+** how to create a repository on github with a new or an already existent projects ? :
+1) go to the project directory for the already existent projects or create a new one for new projects.
+2) use the following command:
+25) git init : we use this command to initialize a new empty repository on our directory.
+3) use the commands (add , commit) to add the files to the staging area.
+4) go to GitHub.com 
+5) create a new repository with any name
+6) select the SSh option not the Https option 
+7) use the following command:
+26) git remote add (remoteName) git@github.com:(yourEmail:theOneOnTheConfiguration)/repoName.git:
+we use this command to link the remote repository with the local repository.
+8) use the following command:
+27) git push -u (remoteName) (branchName): 
+we use this command to push the localRepo to the remoteRepo but the (-u) will do pull command 
+then push command to avoid conflicts when adding a branch to an existent project.
+9) it will ask you for your public key password so keep it in mind.
+-----------------------------------------------------------------------------------------------------------
