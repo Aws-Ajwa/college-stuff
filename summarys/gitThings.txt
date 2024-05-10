@@ -47,6 +47,7 @@ with the gitBash press q to get back to writing command again.
 ------------------------------------------------------------------------------------------
 21) git config --global (configurationName) : 
 we use this command to show the value of the specified configurationName.
+// we use global here to get the configurations not just on the repo level.
 ----------------------------------------------------------------------------------------
 21) git config --global (configurationName) ("Value") : 
 we use this command to edit the value of the specified configurationName.
@@ -104,3 +105,34 @@ we use this command to push the localRepo to the remoteRepo but the (-u) will do
 then push command to avoid conflicts when adding a branch to an existent project.
 9) it will ask you for your public key password so keep it in mind.
 -----------------------------------------------------------------------------------------------------------
+// the pull request and fork is a github feature you can do it to take a repository from another team 
+   and edit it and send them a pull request to allow them to review your modification to there code 
+   they can ether accept your modification or discard it if its not ok with them.
+// the fork is a copy from the base repository that you can edit and then delete it.
+go to https://www.youtube.com/watch?v=n43bagVuJPU&list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF&index=10
+-----------------------------------------------------------------------------------------------------------
+** how to create an Alias to your git bash command? :
+firstly the Alias is like a short cut to frequently used command.
+28) git config --global alias.(theAliasName) (the Command That You Need To Give It An Alias):
+we use this command to give a specific command an Alias to use it in a fast way.
+// if there was a command with spaces you need to put it into ("").
+// the Alias dos'nt disable the main command.
+------------------------------------------------------------------------------------------------------------
+** Branching : we use the branch to work on a part of the project alone then merge it with the whole project.
+29) git branch (the New branch name) : we use this command to create a new branch.
+30) git checkout (branch name) : we use this command to switch to any branch.
+31) git branch -d (branch name) : we use this command to delete a branch.
+// this command is a safe delete that is when deleting any branch the git will check
+   if there is any unmerged modifications it will not delete it.
+31.1) git branch -D (branch name) : this command will delete the branch using force.
+30.1) git checkout -b (branch name) : this command is a short cut that will 
+      create the branch and switch to it in one command.
+32) git branch -m (the new branch) : we use this command to edit a branch name.
+    we use it when we are in that branch.
+33) git merge (branch name) : we use this command to marge the branch into the main one.
+// you can ether merge the branch into the repository or you can push it as a new branch.
+// you can push the branch as a new one with the normal way and it will create a pull request for that. 
+---------------------------------------------------------------------------------------------------------
+34) git stash : we use this command to hide a list of added files to the staging area.
+35) git stash pop : we use this command to get our hidden files.
+36) git stash list : we use this command to show the stashes list on the git.
