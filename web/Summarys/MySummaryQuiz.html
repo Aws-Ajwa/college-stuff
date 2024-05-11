@@ -18,8 +18,8 @@
    // 3) save the file as a (.CSS) file
    // 4) link your file to your html page using link tag in the header tag like so:
    <head>
-    <Link rel = "styleSheet" type = "txt/Css" href = "CSS_file_path/file.Css"/>
-    ! the rel attribute represents the relation attribute to your page and its a StyleSheet.
+    <Link rel = "styleSheet" type = "text/Css" href = "CSS_file_path/file.Css"/>
+    ! the rel attribute represents the relation attribute to your page and its a StyleSheet. (mandatory)
     ! the type attribute its the file type declaration 
     ! the href attribute its clearly the pointer to your file
    </head>
@@ -32,7 +32,8 @@
         property : value;
         ...
     % any property with two words will be separated with a dash (border-style).
-    % all things inside the {} called DeclarationBlock or RuleSet
+    % all things inside the {} called DeclarationBlock.
+    % a single selector and the DeclarationBlock are called RuleSet.
     } 
    ! the selector types:
    // 1) tag name: it will be applied to all elements with that name.
@@ -207,4 +208,11 @@
     padding:padding-top padding-right padding-bottom padding-left;
     % we can use a short hand attribute in the margin like so:
     margin:margin-top margin-right margin-bottom margin-left;
+-->
+<!--
+    ? CSS priority order:
+    ~ 1) Inline style
+    ~ 2) Id Selector
+    ~ 3) Classes
+    ~ 4) attributes
 -->
