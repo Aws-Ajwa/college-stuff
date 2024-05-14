@@ -135,4 +135,21 @@ we use this command to give a specific command an Alias to use it in a fast way.
 ---------------------------------------------------------------------------------------------------------
 34) git stash : we use this command to hide a list of added files to the staging area.
 35) git stash pop : we use this command to get our hidden files.
+35.1) git stash pop stash@{index} : we use this command to pop a stash with a specific index.
 36) git stash list : we use this command to show the stashes list on the git.
+// if you added a a list of file to one stash and then you added another list of new added files
+   to the stash it will create a new stash
+37) git stash save "any massage that identify the stashed files" : 
+    we use this command to add a massage to the stashes when calling the command number (36).
+// the stash is like a stack that is when we have multiple stashes and we need to pop 
+   it will pop the last stored stash.
+38) git stash apply : this command will get you the content fo the last stash without deleting the stash.
+38.1) git stash apply stash@{index} : we use this command to get a stash content with a specific index.
+39) git stash drop : we use this command to delete the last added stash along with its content.
+39.1) git stash drop stash@{index} : 
+we use this command to delete the stash along with its content at a specific index.
+40) git stash show : we use this command to show the content of the last stash.
+40.1) git stash show stash@{index} : we use this command to show the stash content specific index.
+41) git stash clear : we use this command to delete all stashes along with there contents.
+// practice on how to create a multiple file stash and then upload these files on a new branch.
+------------------------------------------------------------------------------------------------------
