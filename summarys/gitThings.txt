@@ -153,3 +153,20 @@ we use this command to delete the stash along with its content at a specific ind
 41) git stash clear : we use this command to delete all stashes along with there contents.
 // practice on how to create a multiple file stash and then upload these files on a new branch.
 ------------------------------------------------------------------------------------------------------
+42) git restore --staged (file name) : we use this command to remove a file from the staging area.
+42.1) git restore --staged * : we use this command to remove all files from the staging area.
+43) code (fileName) : we use this command to open a file on the default file editor.
+// you can use VScode to stage or un-stage any file from the staging area using GUI.
+44) git clean -n : we use this command to show the files that will be removed from the directory.
+// if we don't want to remove a specific file we can use (git add) on it.
+45) git clean -f : we use this command to remove the untracked files from the directory.
+46) git log : we use this command to show the commits and to show the HEAD commit.
+// the Head is a pointer that points to the last commit.
+// to remove unwanted commit simple you need to change the Head pointer to another commit.
+// each commit has a hashCode you can get it from (gitHub) or from (git log).
+47) git reset --hard (theCommitHashCode) : 
+we use this command to change the HeadPointer to the commit with the inserted hashCode.
+48) git push (remoteName) (BranchName) --force : 
+we use this command after changing the headPointer to force the remoteRepo to be updated.
+// if you need to remove more then one commit you can change the HeadPointer to some commit under these commits.
+// the HeadPointer works like a SingleEnded LinkList.  
