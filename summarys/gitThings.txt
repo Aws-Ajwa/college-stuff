@@ -169,4 +169,35 @@ we use this command to change the HeadPointer to the commit with the inserted ha
 48) git push (remoteName) (BranchName) --force : 
 we use this command after changing the headPointer to force the remoteRepo to be updated.
 // if you need to remove more then one commit you can change the HeadPointer to some commit under these commits.
-// the HeadPointer works like a SingleEnded LinkList.  
+// the HeadPointer works like a SingleEnded LinkList. 
+----------------------------------------------------------------------------------------------------------------
+// how to ignore files or folders in the tracking list:
+1) use this command:
+49) touch .gitignore : we use this command to create a file with the (gitignore) extension
+// we need the gitignore type file to fill in the unwanted files to be tracked.
+2) use this command (code .gitignore) : we use it to open the file in the editor.
+// what can you write in the gitignore file:
+A) *.(extension) : this line will make any file with the specified extension to be untractable.
+B) (fileName).(extension) : this line will make this file to be untractable.
+C) !(fileName).(extension) : this line will make an exception to the file to be tractable.
+D) folderName/ : this line will make this file to be untractable.
+// to force the git to track a file or a folder even if its in the gitignore file you can use :
+   git add --force (file or folder) or git add -f (file or folder).
+// you can have a look on https://www.atlassian.com/git/tutorials/saving-changes/gitignore#git-ignore-patterns
+--------------------------------------------------------------------------------------------------------------
+// tags in git : we use tags to mark a release or a version of our project.
+// what is the advantage of using tags : that you can upload each new release or new version on its own.
+// how to create a tag to a file first there is two types of tags :
+1) light weight tag or annotated tag: it takes its information from the last commit massage.
+2) heavy weight tag or unannotated tag: it takes its information from the developer.
+50) git tag : we use this command to show the list of tags.
+51) git tag (tagName) : we use this command to create a new tag.
+52) git push (remoteName) (tagName) : we use this command to push our new tag into the repository.
+53) git tag -a (tagName) -m"anything": we use this command to create an unannotated tag.
+// you may note that when doing this the new commits will appear on all tags:
+sol:this may be true if your tags are on the same branch there for each version needs to be on a new branch. 
+// its recommended to name your tags on a specified pattern (v1.0 , v1.1 ,...).
+54) git tag -l "tagPattern.*" : we use this command to show a list of a specified tag pattern.
+// we can create and delete tags and release using the gitHub GUI.
+55) git tag -d (tagName) : we use this command to delete a tag on the local repo.
+56) git push (remoteName) --delete (tagName) : we use this command to delete a tag on the remote repo.
