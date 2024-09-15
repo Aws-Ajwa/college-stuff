@@ -1,6 +1,3 @@
-
-# [[how to write clean code]]
-# [[principles]]
 # thing to bare in mind
 ###  **1. Naming "Things" Properly**
 #### **Why It Matters:**
